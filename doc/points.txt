@@ -1,0 +1,26 @@
+
+md    =  max-width: ......px;
+md1   =  max-width: \\$md1;
+md2   =  max-width: 991.98px;
+md3   =  max-width: 767.98px;
+md4   =  max-width: 568px;
+md5   =  max-width: 414px;
+md6   =  max-width: 375px;
+
+brds  =  border($color);
+brdr  =  border-radius($radius);
+
+dflc  =  flexcol();
+
+pass  =  position: absolute;
+	     content: '';
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+
+rotate = rotate($deg);
+tran   = anime($time);
+ttr    = transform-translate($x, $y);
+ttrx   = transform-translateX($x);
+ttry   = transform-translateY($y);

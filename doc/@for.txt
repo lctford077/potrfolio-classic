@@ -1,0 +1,43 @@
+.menu {
+	&__item {
+        display: block;
+        text-align: center;
+        @include transform-translateX(-100%);
+        @include anime(.5s);
+
+        &+& {
+            margin-left: 0;
+        }
+
+        &.open {
+            @include transform-translateX(0);
+        }
+    }
+}
+
+Задержка со второго по четвертый на 0.1s
+
+.menu__item {
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            transition-delay: $i * 0.1s;
+        }
+    }
+}
+          
+
+что бы все задержать на 0.15s:  // transition-delay: ($i * 0.1s) + 0.15s;
+
+=======================================================
+
+//padding
+
+$list: 10px. 20px. 30px. 40px;
+
+.item {
+    @for $i from 1 through 4 {     или from 1 to 4
+        &:nth-child(#{$i}) {
+            padding: nth($list, $i);
+        }
+    }
+}
